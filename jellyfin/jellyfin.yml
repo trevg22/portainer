@@ -3,7 +3,7 @@ services:
   jellyfin:
     image: jellyfin/jellyfin
     container_name: jellyfin
-     ports:
+    ports:
       - 8096:80
     volumes:
       - /root/stack_data/jellyfin/config:/config
