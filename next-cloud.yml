@@ -14,7 +14,7 @@ services:
     restart: always
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     volumes:
-      - $root/stack_data/nextcloud/database:/var/lib/mysql
+      - /root/stack_data/nextcloud/database:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=changeme123123123
       - MYSQL_PASSWORD=changechangememe123
