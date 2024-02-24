@@ -8,10 +8,8 @@ services:
     volumes:
       - /root/stack_data/jellyfin/config:/config
       - /root/stack_data/jellyfin/cache:/cache
-      - /root/media:/media:ro
+      - /root/media:/media
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
-    environment:
-      - JELLYFIN_PublishedServerUrl=http://example.com
-    # Optional - may be necessary for docker healthcheck to pass if running in host network mode
+    
     
