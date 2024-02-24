@@ -5,10 +5,10 @@ services:
     ports:
       - 13378:80
     volumes:
-      - /nfs/audiobookshelf/audiobooks:/audiobooks
-      - /nfs/audiobookshelf/podcasts:/podcasts
-      - /nfs/audiobookshelf/config:/config
-      - /nfs/audiobookshelf/metadata:/metadata
+      - $APP_DATA/audiobookshelf/audiobooks:/audiobooks
+      - $APP_DATA/audiobookshelf/podcasts:/podcasts
+      - $APP_DATA/audiobookshelf/config:/config
+      - $APP_DATA/audiobookshelf/metadata:/metadata
     entrypoint: /bin/sh -c "mkdir -p $APP_DATA/audiobookshelf/audiobooks \
                 $APP_DATA/audiobookshelf/podcasts \
                 $APP_DATA/audiobookshelf/config \
