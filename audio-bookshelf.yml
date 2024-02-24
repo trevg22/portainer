@@ -9,7 +9,7 @@ services:
       - $APP_DATA/audiobookshelf/podcasts:/podcasts
       - $APP_DATA/audiobookshelf/config:/config
       - $APP_DATA/audiobookshelf/metadata:/metadata
-    entrypoint: /bin/sh -c "mkdir -p $APP_DATA/audiobookshelf/audiobooks \
-                $APP_DATA/audiobookshelf/podcasts \
-                $APP_DATA/audiobookshelf/config \
-                $APP_DATA/audiobookshelf/metadata"
+    entrypoint: /bin/sh -c "mkdir -p $APP_DATA/audiobookshelf/audiobooks && \
+                            mkdir -p $APP_DATA/audiobookshelf/podcasts && \
+                            mkdir -p $APP_DATA/audiobookshelf/config && \
+                            mkdir -p $APP_DATA/audiobookshelf/metadata"
