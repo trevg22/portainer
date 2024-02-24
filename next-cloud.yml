@@ -20,7 +20,7 @@ services:
       - MYSQL_PASSWORD=changechangememe123
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
-    entrypoint: /bin/sh -c "mkdir -p root/stack_data/nextcloud/database"
+    #entrypoint: /bin/sh -c "mkdir -p root/stack_data/nextcloud/database"
 
   app:
     image: nextcloud
@@ -36,4 +36,4 @@ services:
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
-    entrypoint: /bin/sh -c "mkdir -p /root/stack_data/nextcloud/data"
+    #entrypoint: /bin/sh -c "mkdir -p /root/stack_data/nextcloud/data"
