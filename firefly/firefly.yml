@@ -29,7 +29,7 @@ services:
     container_name: firefly_iii_db
     networks:
       - firefly_iii
-    restart: always
+    restart: no
     env_file: stack.env
     volumes:
       - /root/stack_data/firefly/db:/var/lib/mysql
