@@ -5,9 +5,9 @@ services:
     container_name: jellyfin
     network_mode: 'host'
     volumes:
-      - root/stack_data/jellyfin/config:/config
-      - root/stack_data/jellyfin/cache:/cache
-      - root/media:/media:ro
+      - /root/stack_data/jellyfin/config:/config
+      - /root/stack_data/jellyfin/cache:/cache
+      - /root/media:/media:ro
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
     environment:
