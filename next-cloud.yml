@@ -14,13 +14,13 @@ services:
     restart: always
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     volumes:
-      - $APP_DATA/nextcloud/database:/var/lib/mysql
+      - $root/stack_data/nextcloud/database:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=changeme123123123
       - MYSQL_PASSWORD=changechangememe123
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
-    entrypoint: /bin/sh -c "mkdir -p $APP_DATA/nextcloud/database"
+    entrypoint: /bin/sh -c "mkdir -p root/stack_data/nextcloud/database"
 
   app:
     image: nextcloud
@@ -30,10 +30,10 @@ services:
     links:
       - db
     volumes:
-      - $APP_DATA/nextcloud/data:/var/www/html
+      - /root/stack_data/nextcloud/data:/var/www/html
     environment:
       - MYSQL_PASSWORD=changechangememe123
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
-    entrypoint: /bin/sh -c "mkdir -p $APP_DATA/nextcloud/data"
+    entrypoint: /bin/sh -c "mkdir -p /root/stack_data/nextcloud/data"
