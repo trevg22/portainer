@@ -5,11 +5,11 @@ services:
     ports:
       - 13378:80
     volumes:
-      - $APP_DATA/audiobookshelf/audiobooks:/audiobooks
-      - $APP_DATA/audiobookshelf/podcasts:/podcasts
-      - $APP_DATA/audiobookshelf/config:/config
-      - $APP_DATA/audiobookshelf/metadata:/metadata
-    entrypoint: /bin/sh -c "mkdir -p $APP_DATA/audiobookshelf/audiobooks && \
-                            mkdir -p $APP_DATA/audiobookshelf/podcasts && \
-                            mkdir -p $APP_DATA/audiobookshelf/config && \
-                            mkdir -p $APP_DATA/audiobookshelf/metadata"
+      - /root/stack_data/audiobookshelf/audiobooks:/audiobooks
+      - /root/stack_data/audiobookshelf/podcasts:/podcasts
+      - /root/stack_data/audiobookshelf/config:/config
+      - /root/stack_data/audiobookshelf/metadata:/metadata
+    entrypoint: /bin/sh -c "mkdir -p /root/stack_data/audiobookshelf/audiobooks && \
+                            mkdir -p /root/stack_data/audiobookshelf/podcasts && \
+                            mkdir -p /root/stack_data/audiobookshelf/config && \
+                            mkdir -p /root/stack_data/audiobookshelf/metadata"
