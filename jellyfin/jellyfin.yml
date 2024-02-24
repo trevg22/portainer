@@ -12,7 +12,7 @@ services:
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
     entrypoint: /bin/sh -c "mkdir -p /root/stack_data/jellyfin/config && \
-                            mkdir -p /root/stack_data/jellyfin/cache
+                            mkdir -p /root/stack_data/jellyfin/cache"
      #                       mkdir -p /root/stack_data/audiobookshelf/config && \
      #                       mkdir -p /root/stack_data/audiobookshelf/metadata"
     
