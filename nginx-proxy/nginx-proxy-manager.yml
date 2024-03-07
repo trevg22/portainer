@@ -21,5 +21,5 @@ services:
       # DISABLE_IPV6: 'true'
 
     volumes:
-      - ./data:/data
-      - ./letsencrypt:/etc/letsencrypt
+      - /root/stack_data/nginxproxy:/data
+      - /root/stack_data/nginxproxy:/etc/letsencrypt
