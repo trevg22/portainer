@@ -9,8 +9,9 @@ services:
       - TZ=Etc/UTC
     volumes:
       - /root/stack_data/radarr/config:/config
-      - /root/stack_data/radarr/movies:/movies #optional
+      #- /root/stack_data/radarr/movies:/movies #optional
       - /root/stack_data/radarr/downloads:/downloads #optional
+      - /root/media/movies:/movies
     ports:
       - 7878:7878
     restart: unless-stopped
