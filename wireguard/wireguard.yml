@@ -4,7 +4,7 @@ services:
     container_name: wireguard
     cap_add:
       - NET_ADMIN
-      - SYS_MODULE #optional
+      #- SYS_MODULE #optional
     environment:
       - PUID=1000
       - PGID=1000
