@@ -4,7 +4,7 @@ services:
     container_name: wireguard
     cap_add:
       - NET_ADMIN
-      #- SYS_MODULE #optional
+      - SYS_MODULE #optional
     environment:
       - PUID=1000
       - PGID=1000
@@ -19,7 +19,7 @@ services:
       # - LOG_CONFS=true #optional
     volumes:
       - /root/stack_data/wireguard/config:/config
-      - /root/stack_data/wireguard/lib/modules:/lib/modules #optional
+      - /lib/modules:/lib/modules #optional
     ports:
       - 51820:51820/udp
     networks:
