@@ -6,7 +6,7 @@ services:
     hostname: my-syncthing
     environment:
       - PUID=1000
-      - PGID=1000
+      - PGID=100
     volumes:
       - /root/stack_data/syncthing:/var/syncthing
     ports:
