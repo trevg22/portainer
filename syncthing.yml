@@ -5,8 +5,8 @@ services:
     container_name: syncthing
     hostname: my-syncthing
     environment:
-      - PUID=0
-      - PGID=0
+      - PUID=1000
+      - PGID=1000
     volumes:
       - /root/stack_data/syncthing:/var/syncthing
     ports:
