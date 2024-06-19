@@ -9,8 +9,8 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /root/syncthing/config:/config
-      - /root/Documents:/Documents
+      - /root/stack_data/syncthing/config:/config
+      - /root/stack_data/syncthing/Documents:/Documents
     ports:
       - 8384:8384
       - 22000:22000/tcp
