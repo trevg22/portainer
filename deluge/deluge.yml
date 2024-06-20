@@ -11,8 +11,6 @@ services:
     volumes:
       - /root/stack_data/deluge/config:/config
       - /root/stack_data/deluge/downloads:/downloads
-    networks:
-      - wire-net
     ports:
       - 8112:8112
       - 6881:6881
