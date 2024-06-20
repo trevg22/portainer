@@ -20,6 +20,3 @@ services:
       - 58846:58846 #optional
     restart: unless-stopped
 
-networks:
-  wire-net:
-    external: true
