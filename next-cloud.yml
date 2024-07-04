@@ -37,3 +37,7 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
     #entrypoint: /bin/sh -c "mkdir -p /root/stack_data/nextcloud/data"
+networks:
+  default:
+    external: true
+    name: upstream
