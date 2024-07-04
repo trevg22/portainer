@@ -19,7 +19,7 @@ services:
     #entrypoint: /bin/sh -c "mkdir -p root/stack_data/nextcloud/database"
 
   app:
-    image: nextcloud
+    image: nextcloud:stable
     restart: always
     ports:
       - 8080:80
