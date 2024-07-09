@@ -9,7 +9,8 @@ services:
       - /root/stack_data/audiobookshelf/podcasts:/podcasts
       - /root/stack_data/audiobookshelf/config:/config
       - /root/stack_data/audiobookshelf/metadata:/metadata
-    #entrypoint: /bin/sh -c "mkdir -p /root/stack_data/audiobookshelf/audiobooks && \
-     #                       mkdir -p /root/stack_data/audiobookshelf/podcasts && \
-     #                       mkdir -p /root/stack_data/audiobookshelf/config && \
-     #                       mkdir -p /root/stack_data/audiobookshelf/metadata"
+
+networks:
+  default:
+    external: true
+    name: upstream
