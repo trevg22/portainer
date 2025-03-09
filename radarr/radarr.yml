@@ -3,14 +3,17 @@ services:
   radarr:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
+    user: "1000:1000"
     environment:
       - PUID=1000
       - PGID=1000
+      - UMASk=022
       - TZ=Etc/UTC
     volumes:
-      - /root/stack_data/radarr/config:/config
-      - /root/stack_data/radarr/downloads:/downloads #optional
+      - /home/trevor/stack_data/radarr/config:/config
+      - /home/trevor/stack_data/downloads:/downloads #optional
       - /root/media/movies:/movies
+      - /home/trevor/movies-loc:/movies-loc
     ports:
       - 7878:7878
     restart: unless-stopped

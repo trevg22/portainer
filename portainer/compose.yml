@@ -13,3 +13,4 @@ services:
       - APPSTORAGE_PATH=/stack_storage
      ports:
      - "9443:9443/tcp"
+
